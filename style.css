@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap");
+
+:root {
+  --yellow: #ecb807;
+  --lightgrey: #f8f9fa;
+  --grey: #999;
+  --blue: #1d809f;
+  --lightblue: #1b93b8;
+  --darktext: #212529;
+  --whitetext: #fff;
+}
+body,
+*,
+#main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*   Global Style !!!!    */
+
+#main {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+  color: var(--darktext);
+  text-align: center;
+}
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1.1rem;
+  color: var(--yellow);
+}
+h3 {
+  font-size: 3rem;
+}
+p {
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+section {
+  display: block;
+}
+.main-padding {
+  padding: 8%;
+}
+.bg-img {
+  opacity: 0.95;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn {
+  display: inline-block;
+  color: var(--whitetext);
+  font-size: 1rem;
+  background-color: var(--blue);
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin-top: 30px;
+  /* transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  !!!!!!!!!*/
+}
+.btn:hover {
+  opacity: 0.9;
+}
+/*    Navigation Menu   !!!! */
+.upbtn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  margin: 0;
+}
+.dropdown {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+/* menu icon */
+.dropbtn {  
+  background-color: var(--grey);
+  color: var(--whitetext);
+  padding: 15px;
+  border-radius: 10%;
+  cursor: pointer;
+  opacity: 0.8;
+  margin: 10px;
+}
+.dropdown-content {
+  display: none;
+  z-index: 50; /* ???? */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: var(--blue);
+}
+
+.dropdown-content a {
+  color: var(--whitetext);
+  padding: 15px;
+  text-align: left;
+  display: block;
+}
+.nav-1 {
+  padding-top: 10px;
+  margin: 0;
+}
+.dropdown-content a:hover {
+  background-color: var(--lightblue);
+  z-index: 44; /* ???? */
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline-block;
+  z-index: 45; /* ???? */
+}
+
+/*  Home !!!    */
+
+#home .bg-img {
+  height: 100vh;
+  background-image: url(img/bg-header.jpg);
+}
+
+#home .main-padding {
+  padding: 25% 20%;
+}
+
+/* About !!!    */
+
+#about {
+  background-color: var(--lightgrey);
+}
+#about a {
+  text-decoration: underline;
+  color: var(--lightblue);
+}
+#about .btn {
+  background-color: var(--darktext);
+  color: var(--whitetext);
+}
+
+/* Services !!!   */
+
+#services {
+  background-color: var(--blue);
+  color: var(--lightgrey);
+}
+#services .main-padding {
+  padding: 4% 0;
+}
+.services-icon {
+  padding-top: 30px;
+}
+.icon {
+  display: inline-block;
+  padding: 0px 25px;
+}
+.icon div {
+  width: 120px;
+  height: 120px;
+  margin: 15px auto;
+  font-size: 36px;
+  border-radius: 50%;
+  background: var(--lightgrey);
+  padding: 30px;
+  color: var(--blue);
+  cursor: pointer;
+}
+.icon p {
+  font-size: 1rem;
+}
+
+/*   Download Now  !!!   */
+
+#download .bg-img {
+  height: 75vh;
+  background-image: url(img/bg-download.jpg);
+}
+#download .main-padding {
+  padding: 20%;
+}
+/* Portfoio !!!   */
+
+#portfolio {
+  background-color: var(--lightgrey);
+  padding: 7% 16%;
+}
+.portfolio-img {
+  margin: 2.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-div img {
+  width: 100%;
+  display: block;
+}
+.portfolio-div {
+  display: block;
+  position: relative;
+}
+.portfolio-text {
+  display: block;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  z-index: 2;
+  color: var(--whitetext);
+  text-align: left;
+}
+.portfolio-text h6 {
+  color: var(--whitetext);
+}
+.portfolio-text p {
+  font-size: 1.2rem;
+}
+.portfolio-div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightblue);
+  opacity: 0;
+}
+.portfolio-div:hover img {
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: 0.5s ease;
+}
+.portfolio-div:hover::after {
+  opacity: 0.7;
+  transform: scale(0.9);
+  transition: 0.5s ease;
+}
+
+/*  Contact !!!   */
+#contact {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 100px;
+}
+.grey-btn {
+  background-color: var(--lightgrey);
+  color: var(--darktext);
+  margin-right: 30px;
+}
+.dark-btn {
+  background-color: var(--darktext);
+  color: var(--lightgrey);
+}
+
+/*   Map  !!!    */
+
+iframe {
+  width: 100%;
+}
+/*  Footer !!!  */
+#footer p {
+  font-size: 1rem;
+  color: var(--grey);
+}
+#footer {
+  background-color: var(--lightgrey);
+  padding: 4%;
+}
+.footer-icon {
+  display: inline-block;
+  background-color: var(--blue);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 1.5rem;
+  color: var(--whitetext);
+  padding: 1rem;
+  margin: 2rem 0.3rem;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  #home .main-padding {
+    padding: 10%;
+  }
+  #home .bg-img {
+    height: 50vh;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  #about {
+    padding: 15% 8%;
+  }
+  .services-icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: center; */
+    grid-gap: 40px;
+  }
+  #download .main-padding {
+    padding-top: 25%;
+  }
+
+  .portfolio-img {
+    display: block;
+    /* padding: 3rem; */
+  }
+  .portfolio-div img {
+    margin-bottom: 1rem;
+  }
+  
+  #contact {
+    padding: 15% 0%;
+  }
+}
+
+@media (max-width: 660px) {
+  #home .main-padding {
+    padding: 25% 4%;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  #about {
+    padding: 25% 8%;
+  }
+  .services-icon {
+    display: flex;
+    flex-direction: column;
+  }
+  #download .main-padding {
+    padding: 40% 5%;
+  }
+  #portfolio {
+    padding: 15% 4%;
+  }
+  #contact {
+    padding: 25% 10%;
+  }
+}
